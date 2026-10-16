@@ -48,8 +48,8 @@ LEFT JOIN rental r ON c.customer_id = r.customer_id
 WHERE r.rental_id IS NULL;
 
 -- Check 8: Top 5 customers by number of rentals (informational)
--- Result: 5 rows returned. Top customer_id = [148] with [46] rentals;
---         5th customer_id = [75] with [41] rentals.
+-- Result: 5 rows returned. Top customer_id = 148 with 46 rentals;
+--         5th customer_id = 75 with 41 rentals.
 SELECT customer_id, COUNT(*) AS total_rentals
 FROM rental
 GROUP BY customer_id
