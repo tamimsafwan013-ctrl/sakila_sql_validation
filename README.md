@@ -8,12 +8,12 @@ SQL data validation checks on the MySQL Sakila sample database (DVD rental store
 | 1 | Duplicate customer emails | 0 rows | PASS |
 | 2 | Missing customer emails | 0 rows | PASS |
 | 3 | Orphan rentals (no customer) | 0 rows | PASS |
-| 4 | Orphan payments (no rental) | 0 rows | [result] |
-| 5 | Zero or negative rental rate | 0 rows | [result] |
-| 6 | Returned before rented | 0 rows | [result] |
-| 7 | Customers with no rentals | informational | [result] |
+| 4 | Orphan payments (no rental) | 0 rows | PASS |
+| 5 | Zero or negative rental rate | 0 rows | PASS |
+| 6 | Returned before rented | 0 rows | PASS |
+| 7 | Customers with no rentals | informational | Top customer_id = [148] with [46] rentals;5th customer_id = [75] with [41] rentals. |
 | 8 | Top 5 customers by rentals | informational | Top customer_id 148 (46 rentals), 5th customer_id 75 (41 rentals) |
-| 9 | Rental count reconciliation | values equal | [result] |
+| 9 | Rental count reconciliation | values equal | PASS |
 
 ## Negative tests
 To prove each check can catch a real defect, I injected errors into copies of the tables (original data untouched):
